@@ -499,11 +499,26 @@
 
 // Stevedevelop branch section
 
-async function updateQuote() {
+var formEl = document.querySelector(".pill-left")
+formEl.addEventListener("submit", submitSearch);
+
+async function getQuote() {
     // Fetch a random quote from the Quotable API
-    const response = await fetch("https://api.quotable.io/random");
+    var userInput = document.getElementById("user-input").value;
+    const response = await fetch("https://api.quotable.io/search/quotes?query=" + userInput);
     const data = await response.json();
     console.log(data)
   }
 
-updateQuote()
+function submitSearch (event) {
+  event.preventDefault();
+  var userInput = document.getElementById("user-input").value;
+    // check if inputs are empty (validate)
+if (userInput === "") {
+  alert("You didn't enter anything ");
+  return false;
+}
+else 
+console.log(userInput)
+getQuote(userInput)
+}
