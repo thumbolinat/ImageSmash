@@ -16,13 +16,19 @@
             </ul>
         </nav>
     </header>
-    <section>
-        <div>
-            <div>
-                <!--user text input on left side of "pill" display, these are the key words the apis will use-->
-            </div>
-            <div>
-                <!--fetch and display the picture and quote on the right side of "pill" display-->
+    <section class="main">
+        <div class="pill-parent">
+            <form class="pill-left">
+                <h1>Welcome to ImageSmash</h1>
+                <p>Please enter the idea for the image you want smashed</p>
+
+                <div>
+                <input type="text" id="user-input">
+                <input type="submit">
+                </div>
+            </form>
+            <div class="pill-right">
+                <p>Your image will appear here</p>
             </div>
         </div>
         <div>
@@ -31,10 +37,10 @@
     </section>
     <footer>
         <div>
-            <!--made by us and credit the apis-->
+            <p>Made by Us</p>
         </div>
         <div>
-            <!--logo if we want-->
+            <p>logo</p>
         </div>
     </footer>
     <script src="./assets/js/script.js"></script>
