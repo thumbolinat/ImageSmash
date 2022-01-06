@@ -9,7 +9,7 @@ body {
 }
 
 .header {
-  position: sticky !important;
+  position: static !important;
 }
   
 
