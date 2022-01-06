@@ -507,8 +507,13 @@ async function getQuote() {
     var userInput = document.getElementById("user-input").value;
     const response = await fetch("https://api.quotable.io/search/quotes?query=" + userInput);
     const data = await response.json();
-    console.log(data)
-  }
+    if (data.count === 0){
+      console.log("There were no results");
+    }
+    else 
+    console.log(data);
+    }
+  
 
 function submitSearch (event) {
   event.preventDefault();
