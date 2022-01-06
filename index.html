@@ -1,79 +1,211 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Project Name</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <script src="https://kit.fontawesome.com/9d073ff1f2.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+  <link href="assets/css/style.css">
+  <title>Group Project</title>
 </head>
 
 <body>
-    <header>
-        <h1>Project Name</h1>
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Saved Quotes</li>
-            </ul>
-        </nav>
-    </header>
-<<<<<<< HEAD
-    <section>
-        <div class="pill">
-            <div class="input">
-                <!--user text input on left side of "pill" display, these are the key words the apis will use-->
-            </div>
-            <div class="output">
-                <!--fetch and display the picture and quote on the right side of "pill" display-->
-=======
-    <section class="main">
-        <div class="pill-parent">
-            <form class="pill-left">
-                <h1>Welcome to ImageSmash</h1>
-                <p>Please enter the idea for the image you want smashed</p>
+  <!-- Header begins -->
+  <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
 
-                <div>
-                <input type="text" id="user-input">
-                <input type="submit">
+        <span class="fs-4">Group Project</span>
+
+
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Saved Quotes</a></li>
+
+        </ul>
+    </header>
+
+  </div>
+  <!-- Header Ends -->
+
+  <main>
+
+    <!-- Hero Begins -->
+    <div class="container">
+      <div class="px-4 py-5 my-5 text-center">
+        <div class="col-lg-6 mx-auto">
+
+          <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+
+              <div class="col-md-6 pill-left" >
+                <div class="card-body">
+                  <h5 class="card-title">Welcome to Image Smash</h5>
+                  <p class="card-text">Please enter the idea for the image you want smashed</p>
+                  <input  id = "user-input" type="text" placeholder="Search..">
                 </div>
-            </form>
-            <div class="pill-right">
-                <p>Your image will appear here</p>
->>>>>>> e3fdf3fdc43f923df4aec697ee802d5782d326aa
+                <button type="button" class="btn btn-primary btn-sm">Submit</button>
+              </div>
+
+              <div class="image-slot col-md-6" id="pill-right">
+                  <!-- Image Goes Here -->
+              </div>
             </div>
+          </div>
         </div>
-        <!--five star rating system, depending on the rating it gets stored in local storage and displays on other page in its rating category-->
-        <div class="rating">
-            <i class="rating__star far fa-star"></i>
-            <i class="rating__star far fa-star"></i>
-            <i class="rating__star far fa-star"></i>
-            <i class="rating__star far fa-star"></i>
-            <i class="rating__star far fa-star"></i>
+
+        <div class="container">
+        </div class="rating-buttons">
+        <button type="button" class="btn btn-primary btn-sm">1 Star</button>
+        <button type="button" class="btn btn-secondary btn-sm">2 Stars</button>
+        <button type="button" class="btn btn-secondary btn-sm">3 Stars</button>
+        <button type="button" class="btn btn-secondary btn-sm">4 Stars</button>
+        <button type="button" class="btn btn-secondary btn-sm">5 Stars</button>
+      </div>
+    </div>
+
+    <div class=" container ">
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center hero-buttons">
+        <button type="button" class="btn btn-outline-secondary btn-md px-4 reset-btn">Reset</button>
+        <button type="button" class="btn btn-primary btn-md px-4 gap-3 savequote-btn">Save Quote</button>
+      </div>
+      <!-- Hero Ends -->
+
+      <!-- Side bar and carousel section begins -->
+    </div class="container">
+
+    <!-- Sidebar begins -->
+    <div class="col-md-3 themed-grid-col">
+
+      <div class="d-flex flex-column flex-shrink-0 p-3 bg-light" style="width: 280px;">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32">
+            <use xlink:href="#bootstrap" />
+          </svg>
+          <hr>
+          <ul class="nav nav-pills flex-column mb-auto">
+            <li class="nav-item">
+              <a href="#" class="nav-link active" aria-current="page">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#home" />
+                </svg>
+                Home
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#speedometer2" />
+                </svg>
+                Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#table" />
+                </svg>
+                Orders
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#grid" />
+                </svg>
+                Products
+              </a>
+            </li>
+            <li>
+              <a href="#" class="nav-link link-dark">
+                <svg class="bi me-2" width="16" height="16">
+                  <use xlink:href="#people-circle" />
+                </svg>
+                Customers
+              </a>
+            </li>
+          </ul>
+          <hr>
+      </div>
+    </div>
+
+    <!-- Sidebar ends -->
+
+    <!-- Carousel Begins -->
+
+    <div class="col-md-9 themed-grid-col">
+      <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+            aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
         </div>
-        <!-- The sidebar -->
-        <div class="sidebar">
-            <a class="active" href="#home">Home</a>
-            <a href="#news">News</a>
-            <a href="#contact">Contact</a>
-            <a href="#about">About</a>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <rect width="100%" height="100%" fill="#777" />
+            </svg>
+
+            <div class="container">
+              <div class="carousel-caption text-start">
+
+
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <rect width="100%" height="100%" fill="#777" />
+            </svg>
+
+            <div class="container">
+              <div class="carousel-caption">
+
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+              aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+              <rect width="100%" height="100%" fill="#777" />
+            </svg>
+
+            <div class="container">
+              <div class="carousel-caption text-end">
+              </div>  
+
+         
+            </div>
+          </div>
+          
+          <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
-        
-        <!-- Page content -->
-        <div class="content">
-            ..
-        </div>
-    </section>
-    <footer>
-        <div>
-            <p>Made by Us</p>
-        </div>
-        <div>
-            <p>logo</p>
-        </div>
-    </footer>
-    <script src="./assets/js/script.js"></script>
+              <!-- Carousel Ends -->
+      </div>
+    </div>
+    
+
+  
+  </main>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+  <script src="assets/js/script.js"></script>
+
 </body>
 
 </html>
