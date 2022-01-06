@@ -1,4 +1,26 @@
 
+<<<<<<< Updated upstream
+
+=======
+async function getPicture() {
+  deepai.setApiKey('ebe92e48-62e8-4f68-821c-d538ebd17713');
+  var userInput = document.getElementById("user-input").value;
+  var resp = await deepai.callStandardApi("text2img", {
+    text: userInput,
+  });
+  console.log(resp.output_url);
+  
+   function displayImg() {
+    var img = document.createElement("img");
+    img.src = resp.output_url;
+    document.getElementById("image_placeholder").appendChild(img);
+    console.log(img)
+  }
+
+  displayImg(); 
+}
+>>>>>>> Stashed changes
+
 
 
 
