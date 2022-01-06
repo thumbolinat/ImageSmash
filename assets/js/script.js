@@ -504,6 +504,7 @@ formEl.addEventListener("submit", submitSearch, );
  */
 
 async function getQuote() {
+
   // Fetch a random quote from the Quotable API
   var userInput = document.getElementById("user-input").value;
   const response = await fetch("https://api.quotable.io/search/quotes?query=" + userInput);
@@ -513,9 +514,8 @@ async function getQuote() {
   var index = Math.floor(Math.random() * i);
   //console.log(Math.random(i-1))
     document.getElementById("image_placeholder").textContent = data.results[index].content;
-
-  
 }
+
 
 /* function submitSearch (event) {
   event.preventDefault();
