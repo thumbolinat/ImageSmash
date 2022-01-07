@@ -1,5 +1,6 @@
 var formEl = document.querySelector(".pill-left")
 formEl.addEventListener("submit", submitSearch);
+var imageEl = document.querySelector(".pill-right")
 
 async function getPicture() {
   deepai.setApiKey('ebe92e48-62e8-4f68-821c-d538ebd17713');
@@ -12,10 +13,11 @@ async function getPicture() {
    function displayImg() {
     var img = document.createElement("img");
     img.src = resp.output_url;
-    document.getElementById("pill-right").appendChild(img);
+    imageEl.append(img);
     console.log(img)
   }
-  displayImg();
+
+  displayImg(); 
 }
 
 function submitSearch (event) {
@@ -31,38 +33,6 @@ else
   getPicture(userInput)
   getQuote(userInput)
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -552,474 +522,36 @@ getQuote(userInput)
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* global bootstrap: false */
-/* (function () {
-    'use strict'
-    var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
-    tooltipTriggerList.forEach(function (tooltipTriggerEl) {
-      new bootstrap.Tooltip(tooltipTriggerEl)
-    })
-  })()
+/* var formEl = document.querySelector(".pill-left")
+formEl.addEventListener("submit", submitSearch, );
  */
 
+async function getQuote() {
+
+  // Fetch a random quote from the Quotable API
+  var userInput = document.getElementById("user-input").value;
+  const response = await fetch("https://api.quotable.io/search/quotes?query=" + userInput);
+  const data = await response.json();
+  console.log(data.results[0].content);
+  var i = data.results.length;
+  var index = Math.floor(Math.random() * i);
+  //console.log(Math.random(i-1))
+    document.getElementById("text_placeholder").textContent = data.results[index].content;
+}
 
 
+/* function submitSearch (event) {
+  event.preventDefault();
+  var userInput = document.getElementById("user-input").value;
+  // check if inputs are empty (validate)
+if (userInput === "") {
+  alert("You didn't enter anything ");
+  return false;
+}
+else 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+  console.log(userInput)
+  getPicture(userInput)
+  getQuote(userInput)
+}
+*/
