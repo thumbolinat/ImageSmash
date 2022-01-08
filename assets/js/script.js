@@ -8,32 +8,54 @@ async function getPicture() {
     text: userInput,
   });
   console.log(resp.output_url);
-  
-   function displayImg() {
+
+  function displayImg() {
     var img = document.createElement("img");
     img.src = resp.output_url;
     document.getElementById("image_placeholder").appendChild(img);
     console.log(img)
+
+    // Get the modal
+    var modal = document.getElementById("myModal");
+
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+    // var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    img.onclick = function () {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function () {
+      modal.style.display = "none";
+    }
+
+
+
   }
 
-  displayImg(); 
+  displayImg();
 }
 
-function submitSearch (event) {
+function submitSearch(event) {
   event.preventDefault();
   var userInput = document.getElementById("user-input").value;
   // check if inputs are empty (validate)
-if (userInput === "") {
-  alert("You didn't enter anything ");
-  return false;
+  if (userInput === "") {
+    alert("You didn't enter anything ");
+    return false;
+  }
+  else
+    console.log(userInput);
+  getPicture(userInput);
+  getQuote(userInput);
 }
-else 
-  console.log(userInput)
-  getPicture(userInput)
-  getQuote(userInput)
-}
-
-
 
 
 
@@ -512,8 +534,7 @@ async function getQuote() {
   console.log(data.results[0].content);
   var i = data.results.length;
   var index = Math.floor(Math.random() * i);
-  //console.log(Math.random(i-1))
-    document.getElementById("image_placeholder").textContent = data.results[index].content;
+  document.getElementById("image_placeholder").textContent = data.results[index].content;
 }
 
 
@@ -525,7 +546,7 @@ if (userInput === "") {
   alert("You didn't enter anything ");
   return false;
 }
-else 
+else
 
   console.log(userInput)
   getPicture(userInput)
