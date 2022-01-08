@@ -1,5 +1,6 @@
 var formEl = document.querySelector(".pill-left")
 formEl.addEventListener("submit", submitSearch);
+var imageEl = document.querySelector(".pill-right")
 
 async function getPicture() {
   deepai.setApiKey('ebe92e48-62e8-4f68-821c-d538ebd17713');
@@ -12,7 +13,7 @@ async function getPicture() {
   function displayImg() {
     var img = document.createElement("img");
     img.src = resp.output_url;
-    document.getElementById("image_placeholder").appendChild(img);
+    imageEl.append(img);
     console.log(img)
 
     // Get the modal
@@ -534,7 +535,8 @@ async function getQuote() {
   console.log(data.results[0].content);
   var i = data.results.length;
   var index = Math.floor(Math.random() * i);
-  document.getElementById("image_placeholder").textContent = data.results[index].content;
+  //console.log(Math.random(i-1))
+    document.getElementById("text_placeholder").textContent = data.results[index].content;
 }
 
 
