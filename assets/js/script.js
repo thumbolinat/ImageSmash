@@ -23,11 +23,11 @@ async function getPicture() {
     // var img = document.getElementById("myImg");
     var modalImg = document.getElementById("img01");
     var captionText = document.getElementById("caption");
-
+    var imageText = document.getElementById("text_placeholder");
     img.onclick = function () {
       modal.style.display = "block";
       modalImg.src = this.src;
-      captionText.innerHTML = this.alt;
+      captionText.innerHTML = imageText.innerHTML;
     }
     // Get the <span> element that closes the modal
     var span = document.getElementsByClassName("close")[0];
