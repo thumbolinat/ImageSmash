@@ -1,6 +1,13 @@
 var formEl = document.querySelector(".pill-left")
 formEl.addEventListener("submit", submitSearch);
-var imageEl = document.querySelector(".pill-right")
+var imageEl = document.querySelector(".pill-right");
+var img = document.createElement("img");
+var quote = {};
+var data ={};
+var response = {};
+
+var i ={};
+
 
 async function getPicture() {
   deepai.setApiKey('ebe92e48-62e8-4f68-821c-d538ebd17713');
@@ -36,9 +43,6 @@ async function getPicture() {
     span.onclick = function () {
       modal.style.display = "none";
     }
-
-
-
   }
 
   displayImg();
@@ -491,42 +495,28 @@ function submitSearch(event) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ 
 
 // Stevedevelop branch section
+ 
+ /* async function getQuote() {
 
-/* var formEl = document.querySelector(".pill-left")
-formEl.addEventListener("submit", submitSearch, );
- */
-
-async function getQuote() {
+  // Fetch a random quote from the Quotable API
+  var userInput = document.getElementById("user-input").value;
+  const response = await fetch("https://api.quotable.io/search/quotes?query=" + userInput);
+  data = await response.json();
+  console.log(data.results[0]);
+  i = data.results.length;
+  index = Math.floor(Math.random() * i);
+  quote= data.results[index];
+  document.getElementById("text_placeholder").textContent = quote;
+  
+  }
+  console.log(Math.random(i-1)) */
+  
+   
+  
+  
 
   // Fetch a random quote from the Quotable API
   var userInput = document.getElementById("user-input").value;
@@ -537,22 +527,478 @@ async function getQuote() {
   var index = Math.floor(Math.random() * i);
   document.getElementById("image_placeholder").textContent = data.results[index].content;
   //console.log(Math.random(i-1))
-   /* document.getElementById("text_placeholder").textContent = data.results[index].content; */
-}
+ 
 
 
-/* function submitSearch (event) {
-  event.preventDefault();
-  var userInput = document.getElementById("user-input").value;
-  // check if inputs are empty (validate)
-if (userInput === "") {
-  alert("You didn't enter anything ");
-  return false;
-}
-else
 
-  console.log(userInput)
-  getPicture(userInput)
-  getQuote(userInput)
-}
-*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Tamara's code//
+
+localStorage.setItem("saved-image",img.src);
+localStorage.setItem("saved-quote", quote);
+  
