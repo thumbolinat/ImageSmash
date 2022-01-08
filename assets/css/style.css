@@ -86,8 +86,7 @@ input {
 }
 
 .pill-parent {
-  width: 80%;
-  min-width: 600px;
+  width: 640px;
   /* height: 320px; */
   margin: 40px;
   border-radius: 12px;
@@ -100,7 +99,7 @@ input {
   width:50%;
   height:320px;
   background-color: #F3EEE1;
-  padding: 20px;
+  padding: 20px 30px;
   display:flex;
   flex-direction: column;
   justify-content: space-between;
@@ -134,7 +133,7 @@ input {
   width: 100%;
   background-color: rgba(255, 248, 220, 0.178);
   border-radius: 12px;
-  margin: 7px;
+  margin-top: 7px;
   font-family: 'Open Sans', sans-serif;
   font-weight: bold;
   font-size: 14px;
@@ -184,4 +183,49 @@ right: 0;
 bottom: 0;
 height: 100%;
 width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    padding-bottom: 0;
+    justify-content: center;
+    position: relative;
+    height: 100px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+  }
+
+  header ul {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 0px 10px;
+    font-size: 20px;
+  }
+
+  .pill-parent {
+    width: 320px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin: 20px 0px;
+  }
+
+  .pill-left, .pill-right {
+    width: 100%
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+  }
+
 }
