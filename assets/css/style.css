@@ -1,181 +1,180 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    -webkit-font-smoothing: antialiased;
-  }
-
-*:focus {
-    outline: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
 }
 
-  body {
-    height: 100%;
-    margin: 0;
-    background-size: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    background-image: radial-gradient(#e66465, #9198e5);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-} 
+*:focus {
+  outline: none;
+}
 
-header
-  {
-    width: 100%;
-    height: 60px;
-    display: flex;
-    justify-content: space-between;
-    position:sticky;
-    top: 0px;
-    margin-bottom: 10px;
-    padding: 8px;
-    background-color: #F3EEE1;
-  } 
-
-h1 {
-  font-family: 'Bebas Neue', sans-serif;
-  letter-spacing: 3px;
-  margin-left: 12px;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+body {
+  height: 100%;
+  margin: 0;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   background-image: radial-gradient(#e66465, #9198e5);
   background-size: contain;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-}
-  
-nav ul {
+} 
+
+header
+{
+  width: 100%;
+  height: 60px;
   display: flex;
-  list-style-type: none;
+  justify-content: space-between;
+  position:sticky;
+  top: 0px;
+  margin-bottom: 10px;
+  padding: 8px;
+  background-color: #F3EEE1;
+} 
+
+h1 {
+font-family: 'Bebas Neue', sans-serif;
+letter-spacing: 3px;
+margin-left: 12px;
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+background-image: radial-gradient(#e66465, #9198e5);
+background-size: contain;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+}
+
+nav ul {
+display: flex;
+list-style-type: none;
 }
 
 nav ul li {
-  margin: 10px 12px;
-  font-family: 'Bebas Neue', sans-serif;
-  color:rgb(58, 58, 58);
-  font-size: 18px;
+margin: 10px 12px;
+font-family: 'Bebas Neue', sans-serif;
+color:rgb(58, 58, 58);
+font-size: 18px;
 }
 
 p {
-  margin: 7px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.3;
-  letter-spacing: 0.1rem;
-  color:rgb(58, 58, 58);
+margin: 7px;
+font-family: 'Open Sans', sans-serif;
+font-weight: bold;
+font-size: 14px;
+line-height: 1.3;
+letter-spacing: 0.1rem;
+color:rgb(58, 58, 58);
 }
 
 input {
-  display: block;
-  width: 100%;
-  margin-top: 10px;
+display: block;
+width: 100%;
+margin-top: 10px;
 }
 
 .main {
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  width: 100%;
+justify-content: center;
+align-items: center;
+display: flex;
+width: 100%;
 }
 
 .pill-parent {
-  width: 80%;
-  min-width: 600px;
-  /* height: 320px; */
-  margin: 40px;
-  border-radius: 12px;
-  display: flex;
-  overflow: hidden;
-  box-shadow: 7px 7px 15px rgba(58, 58, 58, 0.808);
+width: 640px;
+/* height: 320px; */
+margin: 40px;
+border-radius: 12px;
+display: flex;
+overflow: hidden;
+box-shadow: 7px 7px 15px rgba(58, 58, 58, 0.808);
 }
 
 .pill-left {
-  width:50%;
-  height:320px;
-  background-color: #F3EEE1;
-  padding: 20px;
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
+width:50%;
+height:320px;
+background-color: #F3EEE1;
+padding: 20px 30px;
+display:flex;
+flex-direction: column;
+justify-content: space-between;
 }
 
 .pill-right {
-  width:50%;
-  height:320px;
-  background-color:rgba(58, 58, 58, 0.808);
-  padding: 20px;
-  text-align: center;
-  position: relative;
+width:50%;
+height:320px;
+background-color:rgba(58, 58, 58, 0.808);
+padding: 20px;
+text-align: center;
+position: relative;
 }
 
 .pill-right p {
-  font-family: 'Bebas Neue', sans-serif;
-  font-size: 18px;
-  color: white;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
-  margin: 0px auto;
-  max-width: 300px;
-  position: relative;
-  z-index: 4;
+font-family: 'Bebas Neue', sans-serif;
+font-size: 18px;
+color: white;
+text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+margin: 0px auto;
+max-width: 300px;
+position: relative;
+z-index: 4;
 }
 
 input {
-  background-color: transparent;
-  padding: 5px;
-  border-radius: 5px;
-  border: rgba(58, 58, 58, 0.808) solid 1px;
-  width: 100%;
-  background-color: rgba(255, 248, 220, 0.178);
-  border-radius: 12px;
-  margin: 7px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: bold;
-  font-size: 14px;
-  line-height: 1.3;
-  letter-spacing: 0.1rem;
-  color:rgb(58, 58, 58);
-  transition: 0.5s;
+background-color: transparent;
+padding: 5px;
+border-radius: 5px;
+border: rgba(58, 58, 58, 0.808) solid 1px;
+width: 100%;
+background-color: rgba(255, 248, 220, 0.178);
+border-radius: 12px;
+margin-top: 7px;
+font-family: 'Open Sans', sans-serif;
+font-weight: bold;
+font-size: 14px;
+line-height: 1.3;
+letter-spacing: 0.1rem;
+color:rgb(58, 58, 58);
+transition: 0.5s;
 }
 
 #user-input:focus {
-  background-color: #e664643d;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  transition: 0.5s;
+background-color: #e664643d;
+background-size: contain;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+transition: 0.5s;
 }
 
 .submit-button:hover {
-  background-color: #7f66add3;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center;
-  color: #F3EEE1;
-  transition: 0.5s;
+background-color: #7f66add3;
+background-size: contain;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;
+color: #F3EEE1;
+transition: 0.5s;
 }
 
 footer
-  {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    position:fixed;
-    bottom: 0px;
-    margin-top: 10px;
-    padding: 8px;
-    background-color: #F3EEE1;
-  } 
+{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position:fixed;
+  bottom: 0px;
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #F3EEE1;
+} 
 
-  img{
+img{
 position: absolute;
 object-fit: contain;
 top: 0;
@@ -184,4 +183,133 @@ right: 0;
 bottom: 0;
 height: 100%;
 width: 100%;
+}
+
+
+#myImg {
+border-radius: 5px;
+cursor: pointer;
+transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+display: none; /* Hidden by default */
+position: fixed; /* Stay in place */
+z-index: 1; /* Sit on top */
+padding-top: 100px; /* Location of the box */
+left: 0;
+top: 0;
+width: 100%; /* Full width */
+height: 100%; /* Full height */
+overflow: auto; /* Enable scroll if needed */
+background-color: rgb(0,0,0); /* Fallback color */
+background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+margin: auto;
+display: block;
+width: 80%;
+max-width: 700px;
+text-align: center;
+color: #ccc;
+padding: 10px 0;
+height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+-webkit-animation-name: zoom;
+-webkit-animation-duration: 0.6s;
+animation-name: zoom;
+animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+from {-webkit-transform:scale(0)} 
+to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+from {transform:scale(0)} 
+to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+position: absolute;
+top: 15px;
+right: 35px;
+color: #f1f1f1;
+font-size: 40px;
+font-weight: bold;
+transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+color: #bbb;
+text-decoration: none;
+cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+.modal-content {
+  width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+header {
+  padding-bottom: 0;
+  justify-content: center;
+  position: relative;
+  height: 100px;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  width: 100%;
+  text-align: center;
+  font-size: 40px;
+}
+
+header ul {
+  width: 100%;
+  text-align: center;
+}
+
+nav ul li {
+  margin: 0px 10px;
+  font-size: 20px;
+}
+
+.pill-parent {
+  width: 320px;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+  margin: 20px 0px;
+}
+
+.pill-left, .pill-right {
+  width: 100%
+}
+
+footer {
+  position: relative;
+  bottom: 0;
 }
