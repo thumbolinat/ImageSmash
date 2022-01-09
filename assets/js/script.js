@@ -540,11 +540,9 @@ async function getQuote() {
   console.log(data.results[0].content);
   var i = data.results.length;
   var index = Math.floor(Math.random() * i);
-  var quote = data.results[index].content;
-  localStorage.setItem("saved-quotes",quote);
-  //document.getElementById("image_placeholder").textContent = data.results[index].content;
+  /* document.getElementById("image_placeholder").textContent = data.results[index].content; */
   //console.log(Math.random(i-1))
-  document.getElementById("text_placeholder").textContent = data.results[index].content;
+  document.getElementById("text_placeholder").textContent = data.results[index].content; 
 }
 
 
