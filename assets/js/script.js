@@ -535,9 +535,9 @@ async function getQuote() {
   console.log(data.results[0].content);
   var i = data.results.length;
   var index = Math.floor(Math.random() * i);
-  document.getElementById("image_placeholder").textContent = data.results[index].content;
+  /* document.getElementById("image_placeholder").textContent = data.results[index].content; */
   //console.log(Math.random(i-1))
-   /* document.getElementById("text_placeholder").textContent = data.results[index].content; */
+  document.getElementById("text_placeholder").textContent = data.results[index].content; 
 }
 
 
