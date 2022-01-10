@@ -18,3 +18,5 @@ https://thumbolinat.github.io/ImageSmash/
 
 Ian Wiffin, Tina Sutherland, Steve Dusom, Tamara Macalalad 
 
+![Screenshot 2022-01-09 193836](https://user-images.githubusercontent.com/93739066/148718720-5d863de0-d252-45d1-b676-05ac0b176dc7.png)
+![Screenshot 2022-01-09 194116](https://user-images.githubusercontent.com/93739066/148718723-d2a06f37-18e4-4156-a8e8-14f4df893d03.png)
