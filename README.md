@@ -12,8 +12,9 @@ HTML, CSS, JS, Third Party APIs (deepai & Quotable )
 
 
 # Website
-https://thumbolinat.github.io/weather-dashboard/
+https://thumbolinat.github.io/ImageSmash/
 
 # Contribution 
 
 Ian Wiffin, Tina Sutherland, Steve Dusom, Tamara Macalalad 
+
